@@ -1,16 +1,15 @@
-
 from fastapi import FastAPI, HTTPException, Depends
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import List, Dict, Optional
 import uvicorn
 
-# Imports dos serviços
-from app.services.harmony_analyzer import HarmonyAnalyzerService
-from app.services.exercise_corrector import ExerciseCorrectorService
-from app.services.reharmonization_service import ReharmonizationService
-from app.services.improvisation_consultant import ImprovisationConsultantService
-from app.services.ai_chat_service import AIHarmonyAssistant
+# Imports dos serviços (CORRIGIDOS - sem app.services)
+from harmony_analyzer import HarmonyAnalyzerService
+from exercise_corrector import ExerciseCorrectorService
+from reharmonization_service import ReharmonizationService
+from improvisation_consultant import ImprovisationConsultantService
+from ai_chat_service import AIHarmonyAssistant
 
 # Modelos Pydantic para requests/responses
 class ProgressionAnalysisRequest(BaseModel):
